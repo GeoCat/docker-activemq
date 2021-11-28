@@ -13,6 +13,8 @@ Run the latest container with:
 
 The JMX broker listens on port 61616 and the Web Console on port 8161.
 
+Web Console username: `admin`, password: `admin`
+
 Port Map
 --------
 
