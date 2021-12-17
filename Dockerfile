@@ -23,7 +23,7 @@ RUN tar xzf $ACTIVEMQ-bin.tar.gz -C  /opt && \
     chown -R activemq:activemq /opt/$ACTIVEMQ && \
     chown -h activemq:activemq $ACTIVEMQ_HOME
 
-RUN cd /opt/apache-activemq-5.16.0/conf && \
+RUN cd /opt/apache-activemq-$ACTIVEMQ_VERSION/conf && \
     cat jetty.xml | sed -e 's/127.0.0.1/0.0.0.0/' > jetty-new.xml && \
     mv jetty-new.xml jetty.xml
 
