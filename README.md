@@ -3,9 +3,7 @@ docker-activemq
 
 **Fork of [rmohr/docker-activemq](https://github.com/rmohr/docker-activemq)**
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/freekode/activemq.svg?maxAge=2592000)](https://hub.docker.com/r/freekode/activemq/)
-
-[Docker](https://www.docker.io/) file for trusted builds of [ActiveMQ](http://activemq.apache.org/) on https://registry.hub.docker.com/u/freekode/activemq/.
+[Docker](https://www.docker.io/) file for trusted builds of [ActiveMQ](http://activemq.apache.org/) on [GitHub Packages](https://github.com/freekode/docker-activemq/pkgs/container/docker-activemq).
 
 Run the latest container with:
 
