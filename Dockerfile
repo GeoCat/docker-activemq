@@ -1,9 +1,9 @@
 FROM openjdk:11
 
-ENV ACTIVEMQ_VERSION 5.16.0
+ENV ACTIVEMQ_VERSION 5.16.3
 ENV ACTIVEMQ apache-activemq-$ACTIVEMQ_VERSION
 ENV ACTIVEMQ_TCP=61616 ACTIVEMQ_AMQP=5672 ACTIVEMQ_STOMP=61613 ACTIVEMQ_MQTT=1883 ACTIVEMQ_WS=61614 ACTIVEMQ_UI=8161
-ENV SHA512_VAL=999928176e57b0805e8a53834e7f4eb648baf271a0c60de31ebd95fa63f2b089aa41c2ef7353790835e2e8cc39c4b778f535b38e6dc0c67a79c3c1da335c4a0a
+ENV SHA512_VAL=3394afe9963f55cf62dafb287bdc58cac1fb76a614cc87939bec7b7909972eb5b3069022a9eb324242a315899b1096335c0531af75152c74eb309c0c5981b217
 
 ENV ACTIVEMQ_HOME /opt/activemq
 
@@ -23,7 +23,7 @@ RUN tar xzf $ACTIVEMQ-bin.tar.gz -C  /opt && \
     chown -R activemq:activemq /opt/$ACTIVEMQ && \
     chown -h activemq:activemq $ACTIVEMQ_HOME
 
-RUN cd /opt/apache-activemq-5.16.0/conf && \
+RUN cd /opt/apache-activemq-$ACTIVEMQ_VERSION/conf && \
     cat jetty.xml | sed -e 's/127.0.0.1/0.0.0.0/' > jetty-new.xml && \
     mv jetty-new.xml jetty.xml
 
