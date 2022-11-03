@@ -49,7 +49,6 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           labels: |
             org.opencontainers.image.vendor=GeoCat B.V.
-            org.opencontainers.image.source = "https://github.com/GeoCat/docker-activemq"
           tags: |
             type=ref,event=branch
             type=ref,event=pr
