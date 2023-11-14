@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17-jre
+FROM eclipse-temurin:21-jre
 
 ENV ACTIVEMQ_VERSION 5.18.3
 ENV ACTIVEMQ apache-activemq-$ACTIVEMQ_VERSION
